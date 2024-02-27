@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace Markdown
@@ -24,15 +26,35 @@ namespace Markdown
                 outputFile = args[2];
             }
 
+            string markdown = File.ReadAllText(inputFile);
+            string html = ConvertMarkdownToHtml(markdown);
+
             if (outputFile != null)
             {
-
+                File.WriteAllText(outputFile, html);
+                Console.WriteLine("HTML successfully written to " + outputFile);
             }
             else
             {
-
+                Console.WriteLine(html);
             }
 
+        }
+        static string ConvertMarkdownToHtml(string markdown)
+        {
+            markdown = Regex.Replace(markdown, @"\*\*(.*?)\*\*", "<b>$1</b>");
+
+            markdown = Regex.Replace(markdown, @"_(.*?)_", "<i>$1</i>");
+
+            markdown = Regex.Replace(markdown, @"```([\s\S]*?)```", "<pre>$1</pre>");
+
+            markdown = Regex.Replace(markdown, @"`(.*?)`", "<tt>$1</tt>");
+
+            markdown = Regex.Replace(markdown, @"(?:\r?\n){2,}", "</p><p>");
+
+            markdown = "<p>" + markdown + "</p>";
+
+            return markdown;
         }
     }
 }
