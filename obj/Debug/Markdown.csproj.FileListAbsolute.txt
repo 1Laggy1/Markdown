@@ -1,0 +1,8 @@
+E:\КПІ\Документи\МТРПЗ\Markdown\Markdown\bin\Debug\Markdown.exe.config
+E:\КПІ\Документи\МТРПЗ\Markdown\Markdown\bin\Debug\Markdown.exe
+E:\КПІ\Документи\МТРПЗ\Markdown\Markdown\bin\Debug\Markdown.pdb
+E:\КПІ\Документи\МТРПЗ\Markdown\Markdown\obj\Debug\Markdown.csproj.AssemblyReference.cache
+E:\КПІ\Документи\МТРПЗ\Markdown\Markdown\obj\Debug\Markdown.csproj.SuggestedBindingRedirects.cache
+E:\КПІ\Документи\МТРПЗ\Markdown\Markdown\obj\Debug\Markdown.csproj.CoreCompileInputs.cache
+E:\КПІ\Документи\МТРПЗ\Markdown\Markdown\obj\Debug\Markdown.exe
+E:\КПІ\Документи\МТРПЗ\Markdown\Markdown\obj\Debug\Markdown.pdb
