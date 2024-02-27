@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 
 namespace Markdown
 {
@@ -21,7 +17,7 @@ namespace Markdown
             string inputFile = args[0];
             string outputFile = null;
 
-            if (args.Length >= 3 && args[1] == "--out")
+            if (args.Length >= 3 && (args[1] == "--out" || args[1] == "-o"))
             {
                 outputFile = args[2];
             }
@@ -50,9 +46,28 @@ namespace Markdown
 
             markdown = Regex.Replace(markdown, @"`(.*?)`", "<tt>$1</tt>");
 
-            markdown = Regex.Replace(markdown, @"(?:\r?\n){2,}", "</p><p>");
+            markdown = Regex.Replace(markdown, @"(?:\A|\r?\n\r?\n)(.*?)(?=\r?\n\r?\n|\z)", "\n<p>$1</p>", RegexOptions.Singleline);
 
-            markdown = "<p>" + markdown + "</p>";
+            string[] patterns = { "<b><tt><i>",
+"<b><i><tt>",
+"<tt><b><i>",
+"<tt><i><b>",
+"<i><b><tt>",
+"<i><tt><b>",
+"<b><tt>",
+"<b><i>",
+"<tt><b>",
+"<tt><i>",
+"<i><b>",
+"<i><tt>" };
+            foreach (string pattern in patterns)
+            {
+                if (Regex.IsMatch(markdown, pattern))
+                {
+                    throw new Exception("Wrong format: " + pattern);
+                }
+            }
+
 
             return markdown;
         }
