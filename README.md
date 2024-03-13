@@ -14,7 +14,7 @@
 
 Використати команду Markdown для виводу документації:
 
-Usage: inputFile [--out <outputFile>]
+Usage: inputFile [--out outputFile] --format=ansi або html
 
 **Вказання на revert-коміт**
 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.SqlServer.Server;
+using System;
 using System.IO;
 using System.Text.RegularExpressions;
 
@@ -16,14 +17,33 @@ namespace Markdown
 
             string inputFile = args[0];
             string outputFile = null;
+            string format = null;
 
-            if (args.Length >= 3 && (args[1] == "--out" || args[1] == "-o"))
+            for (int i = 1; i < args.Length; i++)
             {
-                outputFile = args[2];
+                if (args[i] == "--out" || args[i] == "-o")
+                {
+                    if (i + 1 < args.Length)
+                    {
+                        outputFile = args[i + 1];
+                        i++;
+                    }
+                }
+                else if (args[i].StartsWith("--format="))
+                {
+                    format = args[i].Substring("--format=".Length);
+                }
             }
-
             string markdown = File.ReadAllText(inputFile);
-            string html = ConvertMarkdownToHtml(markdown);
+            string html = "";
+            if ((format == "ansi" || format == null || format == "") && outputFile == null)
+            {
+                html = ConvertMarkdownToHtmlAnsi(markdown);
+            }
+            else
+            {
+                html = ConvertMarkdownToHtml(markdown);
+            }
 
             if (outputFile != null)
             {
@@ -71,5 +91,18 @@ namespace Markdown
 
             return markdown;
         }
+        public static string ConvertMarkdownToHtmlAnsi(string markdown)
+        {
+            markdown = Regex.Replace(markdown, @"\*\*(.*?)\*\*", "\x1b[1m$1\x1b[0m");
+
+            markdown = Regex.Replace(markdown, @"_(.*?)_", "\x1b[3m$1\x1b[0m");
+
+            markdown = Regex.Replace(markdown, @"```([\s\S]*?)```", "\x1b[7m$1\x1b[0m");
+
+            markdown = Regex.Replace(markdown, @"`(.*?)`", "\x1b[2m$1\x1b[0m");
+
+            return markdown;
+        }
+
     }
 }

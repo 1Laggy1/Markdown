@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<test-run id="0" runstate="Runnable" testcasecount="2" result="Passed" total="2" passed="2" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="3" engine-version="3.17.0.0" clr-version="4.0.30319.42000" start-time="2024-03-13 15:30:03Z" end-time="2024-03-13 15:30:03Z" duration="0.475205">
+  <command-line><![CDATA["E:\КПІ\Документи\МТРПЗ\Markdown\Markdown\packages\NUnit.ConsoleRunner.3.17.0\tools\nunit3-console.exe" E:\КПі\Документи\МТРПЗ\Markdown\Markdown\bin\Debug\Markdown.exe]]></command-line>
+  <test-suite type="Assembly" id="1-1003" name="Markdown.exe" fullname="E:\КПі\Документи\МТРПЗ\Markdown\Markdown\bin\Debug\Markdown.exe" runstate="Runnable" testcasecount="2" result="Passed" start-time="2024-03-13T15:30:03.6940047Z" end-time="2024-03-13T15:30:03.7478641Z" duration="0.054130" total="2" passed="2" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="3">
+    <environment framework-version="4.0.1.0" clr-version="4.0.30319.42000" os-version="Microsoft Windows NT 10.0.19045.0" platform="Win32NT" cwd="E:\КПІ\Документи\МТРПЗ\Markdown\Markdown" machine-name="DESKTOP-RMVI2PO" user="Laggy" user-domain="DESKTOP-RMVI2PO" culture="uk-UA" uiculture="en-US" os-architecture="x86" />
+    <settings>
+      <setting name="DisposeRunners" value="True" />
+      <setting name="WorkDirectory" value="E:\КПІ\Документи\МТРПЗ\Markdown\Markdown" />
+      <setting name="ImageRuntimeVersion" value="4.0.30319" />
+      <setting name="ImageTargetFrameworkName" value=".NETFramework,Version=v4.8" />
+      <setting name="ImageRequiresX86" value="True" />
+      <setting name="RunAsX86" value="True" />
+      <setting name="ImageRequiresDefaultAppDomainAssemblyResolver" value="False" />
+      <setting name="TargetRuntimeFramework" value="net-4.8" />
+      <setting name="NumberOfTestWorkers" value="16" />
+    </settings>
+    <properties>
+      <property name="_PID" value="29592" />
+      <property name="_APPDOMAIN" value="domain-" />
+    </properties>
+    <test-suite type="TestSuite" id="1-1004" name="Markdown" fullname="Markdown" runstate="Runnable" testcasecount="2" result="Passed" start-time="2024-03-13T15:30:03.7009901Z" end-time="2024-03-13T15:30:03.7478641Z" duration="0.046804" total="2" passed="2" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="3">
+      <test-suite type="TestFixture" id="1-1000" name="MarkdownTest" fullname="Markdown.MarkdownTest" classname="Markdown.MarkdownTest" runstate="Runnable" testcasecount="2" result="Passed" start-time="2024-03-13T15:30:03.7019869Z" end-time="2024-03-13T15:30:03.7478641Z" duration="0.045560" total="2" passed="2" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="3">
+        <test-case id="1-1001" name="TestAdd" fullname="Markdown.MarkdownTest.TestAdd" methodname="TestAdd" classname="Markdown.MarkdownTest" runstate="Runnable" seed="180126208" result="Passed" start-time="2024-03-13T15:30:03.7049787Z" end-time="2024-03-13T15:30:03.7458693Z" duration="0.041051" asserts="2" />
+        <test-case id="1-1002" name="TestAnsiAdd" fullname="Markdown.MarkdownTest.TestAnsiAdd" methodname="TestAnsiAdd" classname="Markdown.MarkdownTest" runstate="Runnable" seed="1662845517" result="Passed" start-time="2024-03-13T15:30:03.7468669Z" end-time="2024-03-13T15:30:03.7468669Z" duration="0.000509" asserts="1">
+          <output><![CDATA[Це текст у форматі Markdown. В межах нашої роботи ми розглядаємо дуже урізану підмножину цієї мови розмітки. Текст можна розділяти на абзаци, лишаючи між абзацами 1 (один) порожній рядок.
+
+Ми можемо виділяти текст \u001b[1mжирним\u001b[0m, робити його \u001b[3mкурсивним\u001b[0m або \u001b[2mфіксованої ширини\u001b[0m. Також є можливість зберігати фрагменти преформатованого тексту:
+\u001b[7m
+Цей текст є преформатований. 
+   Це означає, що він відобразиться, як є, і жодне інше форматування, як от \u001b[1mжирний\u001b[0m чи \u001b[3mкурсив\u001b[0m на нього не 
+впливає.          А ще тут усі пробіли, відступи та перенесення рядка зберігаються як є
+\u001b[0m
+
+_ - а це нижнє підкреслення
+\u001b[1m_\u001b[0m - теж ок
+snake_case
+\u001b[3mitalic case\u001b[0m
+
+]]></output>
+        </test-case>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>
