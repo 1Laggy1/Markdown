@@ -36,7 +36,7 @@ namespace Markdown
             }
 
         }
-        static string ConvertMarkdownToHtml(string markdown)
+        public static string ConvertMarkdownToHtml(string markdown)
         {
             markdown = Regex.Replace(markdown, @"\*\*(.*?)\*\*", "<b>$1</b>");
 

@@ -6,3 +6,12 @@ E:\КПІ\Документи\МТРПЗ\Markdown\Markdown\obj\Debug\Markdown.csp
 E:\КПІ\Документи\МТРПЗ\Markdown\Markdown\obj\Debug\Markdown.csproj.CoreCompileInputs.cache
 E:\КПІ\Документи\МТРПЗ\Markdown\Markdown\obj\Debug\Markdown.exe
 E:\КПІ\Документи\МТРПЗ\Markdown\Markdown\obj\Debug\Markdown.pdb
+E:\КПІ\Документи\МТРПЗ\Markdown\Markdown\bin\Debug\nunit.framework.dll
+E:\КПІ\Документи\МТРПЗ\Markdown\Markdown\bin\Debug\nunit.framework.legacy.dll
+E:\КПІ\Документи\МТРПЗ\Markdown\Markdown\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+E:\КПІ\Документи\МТРПЗ\Markdown\Markdown\bin\Debug\System.Threading.Tasks.Extensions.dll
+E:\КПІ\Документи\МТРПЗ\Markdown\Markdown\bin\Debug\nunit.framework.xml
+E:\КПІ\Документи\МТРПЗ\Markdown\Markdown\bin\Debug\nunit.framework.legacy.xml
+E:\КПІ\Документи\МТРПЗ\Markdown\Markdown\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+E:\КПІ\Документи\МТРПЗ\Markdown\Markdown\bin\Debug\System.Threading.Tasks.Extensions.xml
+E:\КПІ\Документи\МТРПЗ\Markdown\Markdown\obj\Debug\Markdown.csproj.CopyComplete
